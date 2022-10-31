@@ -1,16 +1,18 @@
 /* Uso de variables en CSS debe llamarse luego con var() ver linea 22 */
 :root {
-    --main-background: linear-gradient(135deg,#330867,#31a7bb) 
+    --main-background: linear-gradient(135deg,#330867,#31a7bb);
+    --very-light-pink: #c7c7c7;
+    --white: #FFFFFF;
+    --black: #000000;
+    --text-input-field: #f7f7f7;
+    --hospital-yellow: #dcc845;
    }
-   
    
    * {
        box-sizing: border-box;
        padding:0;
        margin:0;
    }
-   
-   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
    
    html {
        font-size: 62.5%;
