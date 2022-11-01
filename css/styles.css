@@ -22,7 +22,6 @@ html {
     font-family: Roboto, sans-serif;
 }
 
-
 .login {
     width: 100%;
     height: 100vh;
@@ -33,8 +32,9 @@ html {
 
 .form-container{
     display:grid;
-    grid-template-rows: auto;
+    grid-template-rows: auto 1fr auto;
     width: 300px;
+    justify-items: center;
   }
 
   .logo {
@@ -62,10 +62,27 @@ html {
     font-weight: bold;
     flex-direction: column;
 }
-  .label {
+.form a {
+    color: var(--hospital-yellow);
+    font-size: var(--sm);
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 52px;
+}
+.form label {
+    font-size: var(--md);
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.label {
     font-size: var(--sm);
     font-weight: bold;
     margin-bottom: 4px;
+    margin-top: 20px;
+    
 }
 
 .input {
@@ -77,6 +94,37 @@ html {
     padding: 4px;
     margin-bottom: 12px;
 }
+.input-email {
+    margin-bottom: 22px;
+}
+
+.email-image {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: var(--text-input-field);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.email-image img {
+    width: 80px;
+}
+.resend {
+    font-size: var(--sm);
+}
+
+.resend span {
+    color: var(--very-light-pink);
+}
+
+.resend a {
+    color: var(--hospital-green);
+    text-decoration: none;
+}
+
 .primary-button {
     background-color: var(--hospital-yellow);
     border-radius: 6px;
@@ -88,11 +136,24 @@ html {
     font-weight: bold;
     height: 48px;
 }
+.secondary-button {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-yellow);
+    color: var(--hospital-yellow);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-top: 50px;
+  }
 
 .login-button {
     margin-top: 14px;
     margin-bottom: 30px;
 }
+
 
 @media (max-width: 768px) {
     .logo {
