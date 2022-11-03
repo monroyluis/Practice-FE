@@ -46,8 +46,10 @@ html {
 
 .title {
     font-size: var(--lg);
-    margin-bottom: 12px;
-    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 36px;
+    text-align: start;
+    color: #dcc845;
 }
 
 .subtitle {
@@ -55,11 +57,13 @@ html {
     font-size: var(--md);
     font-weight: 300;
     margin-top: 0;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
     text-align: center;
-  }
+}
+
 .form {
     font-weight: bold;
+    display: flex;
     flex-direction: column;
 }
 .form a {
@@ -69,14 +73,70 @@ html {
     text-decoration: none;
     margin-bottom: 52px;
 }
+/* .form div {
+    display: flex;
+    flex-direction: column;
+} */
 
 .label {
     font-size: var(--sm);
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 14px;
     margin-top: 25px; 
+    color: #c7c7c7;
+}
+.value {
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin: 8px 0 32px 0;
+  }
+
+.main-container{
+    margin-top: 12px;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 20px;
+    place-content: center;
+}
+.product-card {
+    width: 200px;
+}
+.product-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    /* object-fit maintain same size of the original image */
 }
 
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+.product-info figure {
+    margin: 0;
+}
+
+.product-info figure img {
+    width: 28px;
+    height: 28px;
+}
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+  .product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+  }
 .input {
     background-color: var(--text-input-field);
     border: none;
@@ -91,6 +151,7 @@ html {
 .input-email,
 .input-password {
   margin-bottom: 22px;
+  width: 100%;
 }
 
 .email-image {
@@ -159,4 +220,21 @@ footer {
     .logo {
       display: block;
     }
+    .form-container{
+        height: 100%;
+    }
+    .form{
+        height: 100%;
+        justify-content: space-between;
+    }
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, 140px);
+      }
+      .product-card {
+        width: 140px;
+      }
+      .product-card img {
+        width: 140px;
+        height: 140px;
+      }
 }
