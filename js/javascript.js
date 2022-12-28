@@ -10,6 +10,11 @@ menuHamIcon.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoAside);
 
 function toggleDesktopMenu (){
+  const isAsideClosed = aside.classList.contains('inactive');
+
+  if (!isAsideClosed) {
+    aside.classList.add('inactive'); 
+  }
   desktopMenu.classList.toggle("inactive");
 }
 
