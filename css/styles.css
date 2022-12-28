@@ -16,7 +16,10 @@
     padding:0;
     margin:0;
 }
-   
+  
+.inactive {
+  display: none;
+}
 html {
     font-size: 62.5%;
     font-family: Roboto, sans-serif;
@@ -77,6 +80,7 @@ nav {
 
 .navbar-email {
   color: var(--very-light-pink);
+  cursor: pointer;
   font-size: 10px;
   margin-right: 12px;
 }
@@ -169,6 +173,10 @@ nav {
   }
 
   .desktop-menu {
+    position: absolute;
+      background-color: white;
+      top: 40px;
+      right: 210px;
     width: 100px;
     height: auto;
     border: 1px solid var(--very-light-pink);
