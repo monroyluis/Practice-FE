@@ -46,6 +46,11 @@ productList.push({
   image: "./images/pexels-philipp-m-100582.jpg",
 });
 productList.push({
+  name: "Apple M2",
+  price: "1650",
+  image: "./images/M2_Apple_MacBook_Pro_14_Mac_Air_2022.jpeg",
+});
+productList.push({
   name: "Beach chair",
   price:"220",
   image: "./images/pexels-jonas-ferlin-beachchair.jpg",
@@ -55,6 +60,17 @@ productList.push({
   price:"240",
   image: "./images/pexels-hormel-2762247.jpg",
 });
+productList.push({
+  name: "Expresso Machine",
+  price:"840",
+  image: "./images/cafetera-expresso-breville-870.jpeg",
+});
+productList.push({
+  name: "Taylor Made golf bag",
+  price: "350",
+  image: "./images/TaylorMadegolf.jpeg",
+});
+
 
 function renderProducts(arr){
   for (product of arr) {
