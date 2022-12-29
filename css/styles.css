@@ -206,14 +206,14 @@ nav {
     display: inline-block;
   }
 
-  .mobile-menu {
-    background-color: var(--white);
-    position: absolute;
-    top: 40px;
-      left: 0;
-      width: 100%;
-    padding: 24px;
-  }
+.mobile-menu {
+  background-color: var(--white);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+}
   .mobile-menu a {
     text-decoration: none;
     color: var(--black);
@@ -321,19 +321,19 @@ aside {
   padding: 0 24px;
 }
 
-aside-close {
+.product-detail-close {
   background: var(--white);
-  width: 14px;
-  height: 14px;
+  width: 32px;
+    height: 32px;
   position: absolute;
-  top: 24px;
-  left: 24px;
+  top: 32px;
+    left: 32px;
   z-index: 2;
-  padding: 12px;
+  padding: 10px;
   border-radius: 50%;
 }
     
-aside-close:hover {
+.product-detail-close:hover {
   cursor: pointer;
 }
 
