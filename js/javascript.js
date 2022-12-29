@@ -4,6 +4,7 @@ const menuHamIcon = document.querySelector (".menu");
 const mobileMenu = document.querySelector (".mobile-menu");
 const menuCarritoIcon = document.querySelector (".navbar-shopping-cart");
 const aside = document.querySelector (".product-detail");
+const cardsContainer = document.querySelector (".cards-container");
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 menuHamIcon.addEventListener("click", toggleMobileMenu);
@@ -37,3 +38,58 @@ function toggleCarritoAside() {
   
   aside.classList.toggle('inactive');
 }
+
+const productList = [];
+productList.push({
+  name: "Bike",
+  price:"720",
+  image: "./images/pexels-philipp-m-100582.jpg",
+});
+productList.push({
+  name: "Beach chair",
+  price:"220",
+  image: "./images/pexels-jonas-ferlin-beachchair.jpg",
+});
+productList.push({
+  name: "Chair",
+  price:"240",
+  image: "./images/pexels-hormel-2762247.jpg",
+});
+
+function renderProducts(arr){
+  for (product of arr) {
+    const productCard = document.createElement ("div");
+    productCard.classList.add("product-card");
+    
+    const productImg = document.createElement("img");
+    productImg.setAttribute("src", product.image);
+    
+    const productInfo = document.createElement ("div");
+    productInfo.classList.add("product-info");
+    
+    const productInfoDiv = document.createElement ("div");
+    
+    const productPrice = document.createElement ("p");
+    productPrice.innerText ='$' + product.price;
+    
+    const productName = document.createElement ("p");
+    productName.innerText = product.name;
+  
+    productInfoDiv.appendChild(productPrice);
+    productInfoDiv.appendChild(productName);
+  
+    const productInfoFigure = document.createElement ("figure");
+    const productImgCart = document.createElement ("img");
+    productImgCart.setAttribute("src","./images/icons/bt_add_to_cart.svg");
+  
+    productInfoFigure.appendChild(productImgCart);
+  
+    productInfo.appendChild(productInfoDiv);
+    productInfo.appendChild(productInfoFigure);
+    productCard.appendChild(productImg);
+    productCard.appendChild(productInfo);
+  
+    cardsContainer.appendChild(productCard);
+  }
+}
+renderProducts(productList);
